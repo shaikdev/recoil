@@ -1,0 +1,24 @@
+.todo_list_component_wrapper {
+  width: 100%;
+  display: flex;
+//   justify-content: center;
+  align-items: center;
+  gap: 8px;
+  .todo_list_content {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #000000;
+  }
+  .todo_list_checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo_list_delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  }
+}
