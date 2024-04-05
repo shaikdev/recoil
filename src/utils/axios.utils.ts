@@ -5,7 +5,8 @@ import { Models } from "imports/model.import";
 let token = localStorage.getItem("token")
 export const instance = () => {
     const data = axios.create({
-    baseURL: Functions.getBaseURL()+"/api/v1/",
+    // baseURL: Functions.getBaseURL()+"/api/v1/",
+    baseURL:"https://jsonplaceholder.typicode.com",
       headers: {
         "authorization" :token || ""
     },

@@ -1,3 +1,4 @@
+import { Models } from "imports/model.import";
 import { ITODO } from "interfaces/common.interface";
 import _ from "lodash";
 import { atom, selector } from "recoil";
@@ -37,4 +38,21 @@ export const todoReport = selector({
       notCompletedTask,
     };
   },
+});
+
+export const getManyList = selector({
+  key: "getManyList",
+  get: async ({ get }) => {
+    try {
+      const response: any = await Models.list.getManyList();
+      return response;
+    } catch (err: any) {
+      throw new Error(err);
+    }
+  },
+});
+
+export const loading = atom({
+  key: "loading",
+  default: false,
 });
